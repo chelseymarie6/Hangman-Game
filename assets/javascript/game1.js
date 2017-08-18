@@ -137,7 +137,7 @@ function winLose() {
 		winCount++;
 		//Changes HTML
 		document.getElementById('winCounter').innerHTML = winCount;
-		/*alert('You Win');*/
+		alert('You Win');
 		reset();
 	}
 	// When number of guesses reaches 0 then You lose
@@ -146,7 +146,7 @@ function winLose() {
 		loseCount++;
 		//Changes HTML
 		document.getElementById('lossCounter').innerHTML = loseCount;
-		/*alert('You Lose');*/
+		alert('You Lose');
 		reset();
 	}
 }
