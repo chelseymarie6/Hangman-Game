@@ -12,7 +12,7 @@ var lettersInWord = [];
 var numBlanks = 0;
 //Holds blanks and successful guesses
 var blanksAndSuccesses = [];
-//Holds Wrong guesses
+//Holds wrong guesses
 var wrongLetters = [];
 //Counters
 var winCount = 0;
@@ -110,6 +110,7 @@ function compareLetters(userKey) {
 						if(lettersInWord[i] === userKey) {
 							rightGuessCounter++;
 							blanksAndSuccesses[i] = userKey;
+							console.log(blanksAndSuccesses);
 							document.getElementById('wordToGuess').innerHTML = blanksAndSuccesses.join(' ');
 						}	
 					}
@@ -136,7 +137,7 @@ function winLose() {
 		winCount++;
 		//Changes HTML
 		document.getElementById('winCounter').innerHTML = winCount;
-		alert('You Win');
+		/*alert('You Win');*/
 		reset();
 	}
 	// When number of guesses reaches 0 then You lose
@@ -145,7 +146,7 @@ function winLose() {
 		loseCount++;
 		//Changes HTML
 		document.getElementById('lossCounter').innerHTML = loseCount;
-		alert('You Lose');
+		/*alert('You Lose');*/
 		reset();
 	}
 }

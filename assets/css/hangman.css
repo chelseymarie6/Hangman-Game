@@ -1,5 +1,6 @@
 body {
 	background-image: url('../images/arizona.jpg');
+	background-repeat: no-repeat;
 	font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
 }
 
