@@ -137,7 +137,7 @@ function winLose() {
 		winCount++;
 		//Changes HTML
 		document.getElementById('winCounter').innerHTML = winCount;
-		alert('You Win');
+		alert("You win!! That venom won't getcha after all!");
 		reset();
 	}
 	// When number of guesses reaches 0 then You lose
@@ -146,7 +146,7 @@ function winLose() {
 		loseCount++;
 		//Changes HTML
 		document.getElementById('lossCounter').innerHTML = loseCount;
-		alert('You Lose');
+		alert("You lose...sorry bout that snake venom!");
 		reset();
 	}
 }
