@@ -10,7 +10,7 @@ var chosenWord = "";
 var lettersInWord = [];
 //Holds number of blanks in word
 var numBlanks = 0;
-//Holds blanks and successful guesses
+//Holds blank spaces and successful letter guesses 
 var blanksAndSuccesses = [];
 //Holds wrong guesses
 var wrongLetters = [];
@@ -19,6 +19,7 @@ var winCount = 0;
 var loseCount = 0;
 var guessesLeft = 7;
 var rightGuessCounter = 0;
+
 //FUNCTIONS
 //
 function startGame() {
@@ -29,8 +30,8 @@ function startGame() {
 	//Get the number of blanks
 	numBlanks = lettersInWord.length;
 	
-	//RESET
-	//===========================================================
+//RESET
+//
 	rightGuessCounter = 0;
 	guessesLeft = 7;
 	wrongLetters =[];
@@ -57,7 +58,7 @@ function startGame() {
 }
 
 //MAIN PROCCESS
-//-------------------------------------------	
+//	
 //Initiates the Code
 
 startGame();
@@ -89,7 +90,7 @@ function reset() {
 	numBlanks = lettersInWord.length;
 	
 	//RESET
-	//===========================================================
+	//
 	letterGuessed = 0;
 	rightGuessCounter = 0;
 	guessesLeft = 7;
@@ -137,20 +138,20 @@ function winLose() {
 		winCount++;
 		//Changes HTML
 		document.getElementById('winCounter').innerHTML = winCount;
-		//This sets a short timer allowing the code to show the last letter before resetting the game
+		//This sets a 2sec timer allowing the code to show the last letter before resetting the game
 		setTimeout (function() {
     		reset(); 
 		}, 2000);
 		
 		alert("You win!! That venom won't getcha after all!");
 	}
-	// When number of guesses reaches 0 then You lose
+	// When number of guesses reaches 0 then you lose
 	else if(guessesLeft === 0) {
 		//Counts losses
 		loseCount++;
 		//Changes HTML
 		document.getElementById('lossCounter').innerHTML = loseCount;
-		//This sets a short timer allowing the code to show the last letter before resetting the game
+		//This sets a 2sec timer allowing the code to show the last letter before resetting the game
 		setTimeout (function() {
     		reset(); 
 		}, 2000);
