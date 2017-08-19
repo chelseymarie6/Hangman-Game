@@ -137,8 +137,12 @@ function winLose() {
 		winCount++;
 		//Changes HTML
 		document.getElementById('winCounter').innerHTML = winCount;
+		//This sets a short timer allowing the code to show the last letter before resetting the game
+		setTimeout (function() {
+    		reset(); 
+		}, 2000);
+		
 		alert("You win!! That venom won't getcha after all!");
-		reset();
 	}
 	// When number of guesses reaches 0 then You lose
 	else if(guessesLeft === 0) {
@@ -146,7 +150,11 @@ function winLose() {
 		loseCount++;
 		//Changes HTML
 		document.getElementById('lossCounter').innerHTML = loseCount;
+		//This sets a short timer allowing the code to show the last letter before resetting the game
+		setTimeout (function() {
+    		reset(); 
+		}, 2000);
+
 		alert("You lose...sorry bout that snake venom!");
-		reset();
 	}
 }
